@@ -106,8 +106,8 @@ class BullionController < ActionController::Base
       unless call.nil?
         result = call[:result]
         unless result.nil?
-          redis.set("gold_silver_api-#{metal}-#{currency}", result[:price])
-          return result[:price]
+          redis.set("gold_silver_api-#{metal}-#{currency}", result["price"])
+          return result["price"]
         else
           return nil
         end #/unless-else
