@@ -1,1 +1,2 @@
+1.0.1 Permit :metal argument to be 2 digit code (AU, AG, PT, PD) instead of requiring X in front as XAU, XAG, XPT, XPD
 1.0.0 Initial Release

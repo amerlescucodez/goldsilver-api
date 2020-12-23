@@ -7,6 +7,7 @@ module GoldSilver
     class << self
       def fetch metal, currency, date=nil
         raise ArgumentError, "missing metal argument" if metal.nil?
+        metal = "X#{metal&.upcase}" if metal.length == 2
         raise ArgumentError, "invalid metal argument" unless GSAPI_METALS.include?(metal)
         raise ArgumentError, "missing currency argument" if currency.nil?
         raise ArgumentError, "invalid currency argument" unless GSAPI_CURRENCIES.include?(currency)
